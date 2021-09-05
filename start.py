@@ -46,8 +46,8 @@ log = logging.getLogger(__name__)
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
-    logging.getLogger("urllib3").setLevel(logging.INFO)
     log = tf.get_logger()
+    logging.getLogger("urllib3").setLevel(logging.INFO)
 
     parser = argparse.ArgumentParser()
     parser.add_argument("device", type=str)
