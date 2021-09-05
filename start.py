@@ -11,7 +11,7 @@ device_path = "/dev/input/js1"  # Default, overwritten by parsed `device` argume
 
 @sio.event
 def connect():
-    log.info("connection established")
+    log.info("Connection established with server")
 
     class MyController(Controller):
         def on_R2_press(self, v):
@@ -37,10 +37,8 @@ def connect():
 
 
 def start_client():
-    # url = "http://127.0.0.1:5011"
     url = "https://loc.kerga.ga"
-
-    log.info(f"connecting to {url}")
+    log.info(f"Click here to play: {url}")
     sio.connect(url)
 
 
@@ -48,6 +46,7 @@ log = logging.getLogger(__name__)
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
+    logging.getLogger("urllib3").setLevel(logging.INFO)
     log = tf.get_logger()
 
     parser = argparse.ArgumentParser()
