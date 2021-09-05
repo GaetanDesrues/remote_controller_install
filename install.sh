@@ -5,6 +5,7 @@ if [ ! -d "venv" ]; then
 	source venv/bin/activate
 	git clone git@github.com:GaetanDesrues/RemoteController.git
 	cd RemoteController/Client
+	pip install --upgrade pip
 	pip install -r requirements.txt
 else
 	source venv/bin/activate
