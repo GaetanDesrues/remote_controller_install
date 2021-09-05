@@ -6,6 +6,7 @@ import treefiles as tf
 from pyPS4Controller.controller import Controller
 
 sio = socketio.Client()
+device_path = "/dev/input/js1"  # Default, overwritten by parsed `device` argument
 
 
 @sio.event
