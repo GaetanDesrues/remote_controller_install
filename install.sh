@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -d "venv" ]; then
-	python -m venv venv
+	python3 -m venv venv
 	source venv/bin/activate
 	git clone git@github.com:GaetanDesrues/remote_controller_install.git
 	cd remote_controller_install
